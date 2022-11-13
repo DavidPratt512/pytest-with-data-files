@@ -70,7 +70,7 @@ a SQL `CREATE TABLE` script as an input and produces a set of column names
 present in the script. SQL scripts can get pretty long, and perhaps a decent
 test case would test the function against a *"real-world"* SQL script.
 
-At this point, one may object again and ask "That function does too many
+At this point, one may object again and say "That function does too many
 things! It shouldn't have to parse a SQL script *and* search for column
 names!". That's likely correct - and the code would certainly be more
 maintainable if it was broken up so each component had a single responsibility.
@@ -101,6 +101,10 @@ test/
             expected-columns.json
         ...
 ```
+
+Note that this comes with the implication that new tests can be added to the
+`column-extractor-test-cases` directory without having to modify any python
+code. That's pretty slick.
 
 [parametrize-docs]: https://docs.pytest.org/en/6.2.x/parametrize.html#pytest-mark-parametrize-parametrizing-test-functions
 [property-based-testing]: https://youtu.be/99oO-6EIyck
