@@ -81,8 +81,8 @@ It would be nice if there was only one test function, much like
 stored separately from the python code. Perhaps a test like this:
 
 ```python
-def test_column_extract(test_data):
-    assert column_extract(test_data.sql) == test_data.columns
+def test_column_extract(test_column_extract_data):
+    assert column_extract(test_column_extract_data.sql) == test_column_extract_data.columns
 ```
 
 ... with a directory structure like this:
