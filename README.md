@@ -4,6 +4,19 @@ from files.
 I don't use pytest often, but when I do, I often find myself in a situation
 where this information would come in handy.
 
+## Example
+
+Follow the structure of the `column-extractor` directory for an example of how
+to create pytest test cases from directories.
+
+There are 3 components to get this working:
+
+- A pytest fixture in `conftest.py`.
+- A pytest test function in `test_column_extractor.py` that accepts the above
+  fixture.
+- A set of tests defined by convention in the `column-extractor-test-cases`
+  directory.
+
 ## Why
 
 If you use pytest, you are likely familiar with pytest's
